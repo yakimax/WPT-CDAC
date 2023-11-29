@@ -17,8 +17,8 @@ function addContent () {
     console.log("hi");
 
     for ( let i = 0 ; i < formObj.length ; i++ ) {
-        console.log("hi");
-
-         document.getElementById("demo").innerHTML = "hello" ;
+        let ele = document.createElement("h1") ;
+        ele.textContent("formObj[i]");
+        document.getElementById("demo").appendChild(ele) ;
     }
 }
