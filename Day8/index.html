@@ -6,8 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
-    <p class = "para">
+    <p id = "para">
         It is rightly said that being disciplined is essential in life. When a person leads a
         disciplined life, they set an easy path to success. They will develop an approach to
         happiness and a beautiful future ahead. Being disciplined is the practice of having a
@@ -16,22 +15,24 @@
         Even though discipline takes a lot of effort, the advantages of a disciplined life
         make it a worthwhile endeavour.
     </p>
+    <button onclick="buttonOnClick ()"> click to change color style and font</button><br><br><br>
 
+    <form id="form">
+        <label for="first">First Name :</label>
+        <input type="text" id="first"><br>
+        <label for="last">Last Name :</label>
+        <input type="text" id="last"><br>
+        <label for="contact">Phone No :</label>
+        <input type="number" id="contact"><br>
+        <label for="email">Email :</label>
+        <input type="mail" id="email"><br>
+    </form>
+    <button onclick="addContent()"> Submit </button>
+    <div id="demo"> </div>
 
-
-      
-
-
-
-
-
-
-
-
-<script>
-
-    
-    let objArray = [
+    <script src = './script.js'></script>
+<!-- <script>
+let objArray = [
         {
             id : 1,
             name : 'shivam',
@@ -68,6 +69,6 @@
             marks : 25/100,
         }
         ] ;
-    </script>
+    </script> -->
 </body>
 </html>
