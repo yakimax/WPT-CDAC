@@ -14,11 +14,10 @@ function addContent () {
         let ourValue = inputs[i].value ; 
         formObj[ourKnownkey] = ourValue ;
     }
-    console.log("hi");
 
-    for ( let i = 0 ; i < formObj.length ; i++ ) {
-        let ele = document.createElement("h1") ;
-        ele.textContent("formObj[i]");
+    for ( let i = 0 ; i < Object.keys(formObj).length ; i++ ) {
+        let ele = document.createElement("h4") ;
+        ele.textContent = Object.keys(formObj)[i] + " " + Object.values(formObj)[i] ;
         document.getElementById("demo").appendChild(ele) ;
     }
 }

@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .bold:hover{
+            font-weight: 700 ;
+        }
+        /* a:hover{
+            
+        } */
+    </style>
 </head>
 <body>
     <p id = "para">
@@ -16,7 +24,6 @@
         make it a worthwhile endeavour.
     </p>
     <button onclick="buttonOnClick ()"> click to change color style and font</button><br><br><br>
-
     <form id="form">
         <label for="first">First Name :</label>
         <input type="text" id="first"><br>
@@ -28,10 +35,18 @@
         <input type="mail" id="email"><br>
     </form>
     <button onclick="addContent()"> Submit </button>
-    <div id="demo">
-    <p>Demo</p>
+    <div id = "demo" >
     </div>
+    <p class="bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, suscipit quos harum placeat nam pariatur corrupti! Soluta laborum quibusdam saepe inventore sapiente maiores molestias odio architecto voluptatibus magnam, debitis autem!</p> 
+    <p>
+        [<a style="text-decoration: underline;" > Mouse over here bold words of the following paragraph will be highlighted </a> ]
+        We have just started this section for the users (beginner to intermediate) who
+        want to work with various JavaScript problems and write scripts online to test
+        their JavaScript skill.
+    </p>
+    
     <script src = './script.js'></script>
+    
 <!-- <script>
 let objArray = [
         {
