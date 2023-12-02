@@ -6,12 +6,12 @@ function buttonOnClick () {
 }
 
 function addContent () {
-    let formObj =  [];
+    let formObj =  [] ;
     let formEvent = document.getElementById("form") ;
-    let inputs = formEvent.querySelectorAll('input')   ;
+    let inputs = formEvent.querySelectorAll('input') ;
     for ( let i = 0 ; i < formEvent.length ; i++ ) {
         let ourKnownkey = inputs[i].labels[0].outerText ;
-        let ourValue = inputs[i].value ; 
+        let ourValue = inputs[i].value ;
         formObj[ourKnownkey] = ourValue ;
     }
 
