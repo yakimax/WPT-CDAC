@@ -1,12 +1,16 @@
-import './App.css';
-import Hello from './components/Hello';
+import './App.css' ;
+// import Hello from './components/Hello' ;
+import Carousel from './components/Carousel' ;
+import Navbar from './components/Navbar' ;
+import MovieCard from './components/MovieCard' ;
 
 function App() {
   return (
     <div className="App">
-       <Hello/>
+      <Navbar/> 
+      <Carousel/>
+      <MovieCard/>
     </div>
-  );
+  ) ;
 }
-
 export default App ;
