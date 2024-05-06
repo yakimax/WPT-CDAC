@@ -1,5 +1,5 @@
 import './App.css' ;
-// import Hello from './components/Hello' ;
+import Pagination from './components/Pagination' 
 import Carousel from './components/Carousel' ;
 import Navbar from './components/Navbar' ;
 import MovieCard from './components/MovieCard' ;
@@ -9,7 +9,8 @@ function App() {
     <div className="App">
       <Navbar/> 
       <Carousel/>
-      <MovieCard/>
+      {/* <MovieCard/> */}
+      <Pagination/>
     </div>
   ) ;
 }
