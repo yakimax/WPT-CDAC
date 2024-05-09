@@ -7,7 +7,6 @@ export default function Pagination() {
     const handlePrev = ()=>{
         if(page >= 2) {
             setPage(page--) ;
-            console.log(page)
             if (array[0] > page && page >= 1) {
                 setArr([array[0]-1,array[1]-1,array[2]-1]) ;
             }

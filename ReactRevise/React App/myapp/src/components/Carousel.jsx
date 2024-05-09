@@ -17,7 +17,7 @@ function Carousel() {
         },3000) ;
         return()=>{
             clearTimeout(timer) ;
-        };
+        } ;
     } )
     let handleprev = ()=>{
         setIndex((( index - 1 ) + obj.length ) % obj.length ) ;
