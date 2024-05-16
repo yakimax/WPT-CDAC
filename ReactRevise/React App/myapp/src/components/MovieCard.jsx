@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react' ;
+import React, { useEffect, useState ,useContext} from 'react' ;
+import { Context } from './Context';
 const url = 'https://api.themoviedb.org/3/movie/popular?api_key=f3d5cc67afc578246bf41c05b08e3164&page=' ;
 const tempurl = 'https://image.tmdb.org/t/p/w500' ;
 
@@ -6,6 +7,7 @@ function MovieCard({page}) {
   const [arr,setArr] = useState([]) ;
   const [title,setTitle] = useState('') ;
   const [overview,setOverview] = useState('') ;
+  let {array,setArray} = useContext(Context) ;
     const options = {
           method: 'GET',
           headers: {
@@ -13,7 +15,7 @@ function MovieCard({page}) {
           Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2Q1Y2M2N2FmYzU3ODI0NmJmNDFjMDViMDhlMzE2NCIsInN1YiI6IjYyNmMwOThiNjdiNjEzMDA2NmQ1YjU3OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._XDfAXE4HbKaVrLgBjW5hlYU7Yl0TG8c3uzPN8AzThE'
         }
       }
-     const handleOverview = (e)=> {
+    const handleOverview = (e)=> {
       let currtitle = e.target.parentElement.childNodes[0].innerText ;
       setTitle(currtitle) ;
       let filt  = arr.filter((movie)=>{
@@ -21,15 +23,21 @@ function MovieCard({page}) {
       })
       setOverview( filt[0].overview ) ;
 }
+  let handleFavourites =()=>{
+    let filt = arr.filter((movie)=>{
+      return ( movie.original_name !== undefined ? movie.original_name : movie.original_title) === title ;
+    })
+    setArray(filt[0]) ;
+    console.log(array) ;
+  }
 useEffect(()=>{
     async function fetchdata() {
-      // console.log(page);
           const response = await fetch(url+page,options) ;
           const data = await response.json() ;
           setArr(data.results) ;
-        } 
+        }
     fetchdata() ;
- },[page]) ;
+},[page]) ;
 
 return (
 <div class="container text-center">
@@ -53,6 +61,7 @@ return (
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" onClick={handleFavourites} class="btn btn-primary">Add to Favourites</button>
                           </div>
                         </div>
                       </div>

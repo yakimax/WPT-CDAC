@@ -1,16 +1,17 @@
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import './App.css' ;
-import Pagination from './components/Pagination' 
-import Carousel from './components/Carousel' ;
-import Navbar from './components/Navbar' ;
-import Footer from './components/Footer';
+import Home from './components/Home';
+import Favourites from './components/Favourites';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/> 
-      <Carousel/>
-      <Pagination/>
-      <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path = "/"  element={<Home/>}/>
+          <Route path = "/Favourites" element = {<Favourites/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   ) ;
 }
