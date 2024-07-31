@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" id="name" placeholder="Name"/>
+        <button type="submit" onClick="myFun()">submit</button>
+     <div class="display"></div>
+</body>
+    <script>
+        function myFun() {
+            let name = document.getElementById('name').value ;
+            let now = new Date() ;
+            now.setTime(now.getTime() + 1 * 3600 * 1000) ;
+            document.cookie = `name = ${name} ; expires = ${now.toUTCString()} ;` ;
+            console.log(now.getDate()+ 1 * 3600 * 1000)
+        }
+    </script>
+</html>

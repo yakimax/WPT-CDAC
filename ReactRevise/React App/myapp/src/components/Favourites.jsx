@@ -21,19 +21,19 @@ function Favourites() {
                 </tr>
             </thead>
             {
-                arr.map((movie)=>(
-                    <tbody class="table-group-divider">
-                        <tr>
-                        <th scope="row">1</th>
-                        <td>{}</td>
-                        <td>{movie.original_name !== undefined ? movie.original_name : movie.original_title}</td>
-                        <td>{movie.overview}</td>
-                            <div class="d-grid gap-2 col-6 mx-auto">
-                                <button class="btn btn-primary" type="button">Remove</button>
-                            </div>
-                        </tr>
-                    </tbody>
-                ))
+                // arr.map((movie)=>(
+                //     <tbody class="table-group-divider">
+                //         <tr>
+                //         <th scope="row">1</th>
+                //         <td>{}</td>
+                //         <td>{movie.original_name !== undefined ? movie.original_name : movie.original_title}</td>
+                //         <td>{movie.overview}</td>
+                //             <div class="d-grid gap-2 col-6 mx-auto">
+                //                 <button class="btn btn-primary" type="button">Remove</button>
+                //             </div>
+                //         </tr>
+                //     </tbody>
+                // ))
             };
         </table>
     </div>

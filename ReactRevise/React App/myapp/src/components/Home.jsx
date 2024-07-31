@@ -5,13 +5,11 @@ import Navbar from './Navbar' ;
 import Footer from './Footer' ;
 import { Context } from './Context';
 
-
 export default function Home() {
-  const [array,setArray]=useState({});
-  
+  const [array,setArray] = useState([]) ;
   return (
-    <Context.Provider value ={{array,setArray}} >
-        <Navbar/> 
+    <Context.Provider value ={{array,setArray}}>
+        <Navbar/>
         <Carousel/>
         <Pagination/>
         <Footer/>

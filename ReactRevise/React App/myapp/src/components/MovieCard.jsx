@@ -23,13 +23,13 @@ function MovieCard({page}) {
       })
       setOverview( filt[0].overview ) ;
 }
-  let handleFavourites =()=>{
-    let filt = arr.filter((movie)=>{
-      return ( movie.original_name !== undefined ? movie.original_name : movie.original_title) === title ;
-    })
-    setArray(filt[0]) ;
-    console.log(array) ;
-  }
+let handleFavourites =()=>{
+  let filt = arr.filter((movie)=>{
+    return ( movie.original_name !== undefined ? movie.original_name : movie.original_title) === title ;
+  })
+  setArray(array,filt[0]) ;
+  console.log(array);
+}
 useEffect(()=>{
     async function fetchdata() {
           const response = await fetch(url+page,options) ;
@@ -37,7 +37,7 @@ useEffect(()=>{
           setArr(data.results) ;
         }
     fetchdata() ;
-},[page]) ;
+},[page,arr]) ;
 
 return (
 <div class="container text-center">
